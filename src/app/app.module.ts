@@ -8,6 +8,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleCommentComponent } from './article-comment/article-comment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ArticleCommentComponent } from './article-comment/article-comment.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
