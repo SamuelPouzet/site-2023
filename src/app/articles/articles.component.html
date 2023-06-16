@@ -1,7 +1,5 @@
-<p>articles works!</p>
-
 <ul>
   <li *ngFor="let article of articles">
-    {{ article.name}}
+    <a routerLink="/article/{{article.id}}"> {{ article.name}}</a>
   </li>
 </ul>

@@ -13,4 +13,9 @@ export class ArticleService {
   getArticles(): Observable<Article[]> {
     return of(ARTICLES);
   }
+
+  getArticle(id: number ): Observable<Article> {
+    const article = ARTICLES.find(a => a.id === id)!;
+    return of(article);
+  }
 }
