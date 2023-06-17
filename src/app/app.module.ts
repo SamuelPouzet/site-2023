@@ -9,6 +9,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleCommentComponent } from './article-comment/article-comment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

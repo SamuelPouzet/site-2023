@@ -1,0 +1,87 @@
+// see http://mcg.mbitson.com
+
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+
+$amber-palette: (
+  50: #fff8e1,
+  100: #ffedb3,
+  200: #ffe183,
+  300: #ffd650,
+  400: #ffcb29,
+  500: #ffc309,
+  600: #ffb401,
+  700: #ffa200,
+  800: #ff9100,
+  900: #ff7100,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  )
+);
+
+$violet-palette: (
+  50: #f1dfe8,
+  100: #deafc6,
+  200: #ca7da0,
+  300: #b74c7d,
+  400: #aa2964,
+  500: #9f004c,
+  600: #910049,
+  700: #7d0042,
+  800: #69033c,
+  900: #45062e,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  )
+);
+
+$golden-palette: (
+  50 : #f0ece0,
+  100 : #d9cfb3,
+  200 : #bfb080,
+  300 : #a5904d,
+  400 : #927826,
+  500 : #7f6000,
+  600 : #775800,
+  700 : #6c4e00,
+  800 : #624400,
+  900 : #4f3300,
+  A100 : #ffc982,
+  A200 : #ffb44f,
+  A400 : #ff9e1c,
+  A700 : #ff9303,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
