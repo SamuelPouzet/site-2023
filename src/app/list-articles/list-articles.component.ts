@@ -27,18 +27,4 @@ export class ListArticlesComponent implements OnInit {
     return this.articleService.filterArticlesByCategory(this.filter).subscribe(articles => this.articles = articles);
   }
 
-  /*
-  filterByCategory(category: Categorie){
-    this.currentCategory = category;
-    if(this.listArticleSubscription !== undefined) {
-      this.listArticleSubscription.unsubscribe();
-    }
-    if(category === this.defaultCategory) {
-      this.listArticleSubscription = this.getArticles();
-    }else{
-      this.listArticleSubscription = this.articleService.filterArticlesByCategory(category).subscribe(articles => this.articles = articles);
-    }
-  }
-  */
-
 }
