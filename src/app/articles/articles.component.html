@@ -4,33 +4,16 @@
       <h1>Articles</h1>
       Impressions, remarques et coups de gueules
       <ul>
-        <li (click)="filterByCategory(defaultCategory)">
+        <li (click)="changeFilter(defaultCategory)">
           {{defaultCategory.name}}
         </li>
-        <li *ngFor="let category of categories" (click)="filterByCategory(category)">
+        <li *ngFor="let category of categories" (click)="changeFilter(category)">
           <span class="colortest">{{category.name}}</span>
         </li>
       </ul>
     </mat-drawer>
     <mat-drawer-content>
-      <h2> {{ currentCategory.name }}</h2>
-
-      <mat-card class="article-card"  *ngFor="let article of articles" >
-        <mat-card-header>
-          <mat-card-title color="primary"> {{article.name}}</mat-card-title>
-          <mat-card-subtitle>{{article.author.name}} le {{ article.date_creation }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            {{article.content}}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a routerLink="/article/{{article.id}}">
-            <span class="badge">{{article.id}}</span> lire
-          </a>
-        </mat-card-actions>
-      </mat-card>
+     <app-list-articles [filter]="currentCategory"></app-list-articles>
     </mat-drawer-content>
   </mat-drawer-container>
 

@@ -21,6 +21,9 @@ export class ArticleService {
   }
 
   filterArticlesByCategory(category: Categorie ): Observable<Article[]> {
+    if(category.id === 0 ){
+      return this.getArticles();
+    }
     const article = ARTICLES.filter(a => a.categorie.id === category.id)!;
     return of(article);
   }

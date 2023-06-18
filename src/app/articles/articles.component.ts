@@ -12,7 +12,7 @@ import {Subscription} from "rxjs";
 })
 export class ArticlesComponent implements OnInit{
 
-  articles: Article[] = [];
+
   categories: Categorie[] = [];
   defaultCategory: Categorie = {
     id: 0,
@@ -24,34 +24,22 @@ export class ArticlesComponent implements OnInit{
   listArticleSubscription: Subscription| undefined;
 
   constructor(
-   private articleService: ArticleService,
    private categorieService: ArticleCategorieService,
   ) {
   }
 
   ngOnInit() {
     this.getCategories();
-    this.listArticleSubscription = this.getArticles();
   }
 
-  getArticles() {
-    return this.articleService.getArticles().subscribe(articles => this.articles = articles);
-  }
 
   getCategories() {
     this.categories = this.categorieService.getCategories();
   }
 
-  filterByCategory(category: Categorie){
-    this.currentCategory = category;
-    if(this.listArticleSubscription !== undefined) {
-      this.listArticleSubscription.unsubscribe();
-    }
-    if(category === this.defaultCategory) {
-      this.listArticleSubscription = this.getArticles();
-    }else{
-      this.listArticleSubscription = this.articleService.filterArticlesByCategory(category).subscribe(articles => this.articles = articles);
-    }
-
+  changeFilter(filter: Categorie)
+  {
+    this.currentCategory = filter;
   }
+
 }

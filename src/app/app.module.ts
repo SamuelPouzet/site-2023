@@ -13,6 +13,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { ListArticlesComponent } from './list-articles/list-articles.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     ArticlesComponent,
     PagenotfoundComponent,
     ArticleComponent,
-    ArticleCommentComponent
+    ArticleCommentComponent,
+    ListArticlesComponent
   ],
     imports: [
         BrowserModule,
