@@ -5,6 +5,10 @@ export const ARTICLES: Article[] = [
     id: 1,
     name: "PREMIER ARTICLE",
     content: 'LOREM IPSUM DOLOR SIT AMET',
+    categorie: {
+      id: 1,
+      name: "Jeux vidéos"
+    },
     imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     author: {
       id: 1,
@@ -15,6 +19,10 @@ export const ARTICLES: Article[] = [
   {
     id: 2,
     name: "JE HAIS LES HUMAINS",
+    categorie: {
+      id: 6,
+      name: "Divers"
+    },
     content: 'LOREM IPSUM DOLOR SIT AMET',
     imgUrl: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     author: {
@@ -26,6 +34,10 @@ export const ARTICLES: Article[] = [
   {
     id: 3,
     name: "TIME TO RISE",
+    categorie: {
+      id: 4,
+      name: "Musique"
+    },
     content: 'LOREM IPSUM DOLOR SIT AMET',
     imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     author: {
@@ -37,6 +49,10 @@ export const ARTICLES: Article[] = [
   {
     id: 4,
     name: "A LINK TO THE PAST",
+    categorie: {
+      id: 1,
+      name: "Jeux vidéos"
+    },
     content: 'LOREM IPSUM DOLOR SIT AMET',
     imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     author: {
@@ -48,6 +64,10 @@ export const ARTICLES: Article[] = [
   {
     id: 5,
     name: "Hammerfall - Nouvel album - Hammer Of Dawn",
+    categorie: {
+      id: 4,
+      name: "Musique"
+    },
     content: 'Sorti le 25 février dernier, après un album DOMINION vraiment excellent, porté par des titres mémorables comme Dominion ou We make sweden rock, le nouvel album des suédois de HAMMERFALL nous arrive.\n' +
       '\n' +
       'Alors, que dire des nouvelles aventures de HECTOR le paladin?\n' +
@@ -68,6 +88,10 @@ export const ARTICLES: Article[] = [
   {
     id: 6,
     name: "L'humanité ne mérite aucune rédemption",
+    categorie: {
+      id: 6,
+      name: "Divers"
+    },
     content: 'LOREM IPSUM DOLOR SIT AMET',
     imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     author: {
