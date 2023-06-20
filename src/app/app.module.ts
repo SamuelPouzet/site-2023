@@ -12,10 +12,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatMenuModule} from "@angular/material/menu";
 import {ListArticlesComponent} from './list-articles/list-articles.component';
 import {MusiqueComponent} from './musique/musique.component';
+import { VideoComponent } from './video/video.component';
+import {YouTubePlayerModule} from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import {MusiqueComponent} from './musique/musique.component';
     ArticleComponent,
     ArticleCommentComponent,
     ListArticlesComponent,
-    MusiqueComponent
+    MusiqueComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import {MusiqueComponent} from './musique/musique.component';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,14 @@
-musique works !
-<section class="articles">
-  <mat-card class="article-card"  *ngFor="let musique of musiques">
-    <mat-card-header>
-      <div mat-card-avatar class="article-card-header-image"></div>
-      <mat-card-title> {{musique.name}}</mat-card-title>
-      <mat-card-subtitle>{{musique.performer}}</mat-card-subtitle>
-    </mat-card-header>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <mat-card-actions>
-
-    </mat-card-actions>
-  </mat-card>
-</section>
+<mat-drawer-container class="example-container" autosize ="true">
+  <mat-drawer mode="side" opened  position="end">
+    <mat-action-list>
+      <mat-list-item *ngFor="let musique of musiques" (click)="selectVideo(musique)">
+        {{musique.name}}
+      </mat-list-item>
+    </mat-action-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-video *ngIf="currentVideoId" [videoId]="currentVideoId"></app-video>
+  </mat-drawer-content>
+</mat-drawer-container>

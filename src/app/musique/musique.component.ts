@@ -9,6 +9,8 @@ import {MusiqueService} from "../Services/musique.service";
 })
 export class MusiqueComponent implements OnInit {
   musiques: Musique[] = [];
+  currentMusique: Musique | undefined;
+  currentVideoId: string | undefined |null;
 
   constructor(
     private musiqueService: MusiqueService
@@ -19,8 +21,18 @@ export class MusiqueComponent implements OnInit {
     this.getMusiques();
   }
 
+  selectMusique(musique: Musique)
+  {
+    this.currentMusique = musique;
+  }
+
   getMusiques() {
     this.musiqueService.getMusiques().subscribe(musiques=>this.musiques = musiques);
-    console.log(this.musiques);
   }
+
+  selectVideo(musique: Musique) {
+    const params = new URL(musique.url).searchParams;
+    this.currentVideoId = params.get('v');
+  }
+
 }
