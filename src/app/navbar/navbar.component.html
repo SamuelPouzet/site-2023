@@ -4,5 +4,16 @@
     <div class="spacer"></div>
     <a mat-button routerLink="/">Accueil</a>
     <a mat-button routerLink="/articles">Articles</a>
+    <button mat-button [matMenuTriggerFor]="menu">Mon univers</button>
+    <mat-menu #menu="matMenu">
+      <ul class="unsignedList">
+        <li>
+          <a mat-button routerLink="/musique">Musique</a>
+        </li>
+        <li>
+          <a mat-button routerLink="/partenaires">Partenaires</a>
+        </li>
+      </ul>
+    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

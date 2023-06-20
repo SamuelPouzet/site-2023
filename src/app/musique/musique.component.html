@@ -1,0 +1,14 @@
+musique works !
+<section class="articles">
+  <mat-card class="article-card"  *ngFor="let musique of musiques">
+    <mat-card-header>
+      <div mat-card-avatar class="article-card-header-image"></div>
+      <mat-card-title> {{musique.name}}</mat-card-title>
+      <mat-card-subtitle>{{musique.performer}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+</section>
