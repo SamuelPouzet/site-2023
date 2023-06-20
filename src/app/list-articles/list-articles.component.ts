@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Categorie} from "../Interfaces/article-categorie";
 import {Article} from "../Interfaces/article";
 import {ArticleService} from "../Services/article.service";
@@ -8,12 +8,19 @@ import {ArticleService} from "../Services/article.service";
   templateUrl: './list-articles.component.html',
   styleUrls: ['./list-articles.component.css']
 })
-export class ListArticlesComponent implements OnInit {
+export class ListArticlesComponent implements OnInit, OnChanges {
   @Input() filter?: Categorie;
   articles: Article[] = [];
   ngOnInit() {
     console.log('filtering');
-    this.getArticles()
+    this.getArticles();
+  }
+
+  ngOnChanges(changes: SimpleChanges)
+  {
+    if( changes['filter']) {
+      this.getArticles();
+    }
   }
 
   constructor(
