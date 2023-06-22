@@ -1,0 +1,16 @@
+<nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
+  <a mat-tab-link *ngFor="let type of types"
+     (click)="changeType( type )"
+     [active]="activeType == type"> {{type.name}} </a>
+</nav>
+<mat-tab-nav-panel #tabPanel>
+  <div *ngIf="activeType">
+    {{ activeType.name}}
+  </div>
+  <ul>
+    <li *ngFor="let partner of partnerList">
+      {{ partner.name}}
+    </li>
+  </ul>
+
+</mat-tab-nav-panel>

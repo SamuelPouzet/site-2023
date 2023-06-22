@@ -19,6 +19,8 @@ import {ListArticlesComponent} from './list-articles/list-articles.component';
 import {MusiqueComponent} from './musique/musique.component';
 import { VideoComponent } from './video/video.component';
 import {YouTubePlayerModule} from '@angular/youtube-player';
+import { PartnerComponent } from './partner/partner.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
     ArticleCommentComponent,
     ListArticlesComponent,
     MusiqueComponent,
-    VideoComponent
+    VideoComponent,
+    PartnerComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
     MatCardModule,
     MatSidenavModule,
     MatListModule,
+    MatTabsModule,
     YouTubePlayerModule
   ],
   providers: [],
