@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ArticlesComponent} from './articles/articles.component';
-import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {ArticleComponent} from './article/article.component';
 import {ArticleCommentComponent} from './article-comment/article-comment.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -21,21 +20,40 @@ import { VideoComponent } from './video/video.component';
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { PartnerComponent } from './partner/partner.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {AuthInterceptor} from "./auth.interceptor";
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { SecureComponent } from './secure/secure.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ArticlesComponent,
-    PagenotfoundComponent,
     ArticleComponent,
     ArticleCommentComponent,
     ListArticlesComponent,
     MusiqueComponent,
     VideoComponent,
-    PartnerComponent
+    PartnerComponent,
+    LoginComponent,
+    RegisterComponent,
+    SecureComponent,
+    NotFoundComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -46,9 +64,24 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatSidenavModule,
     MatListModule,
     MatTabsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
