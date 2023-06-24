@@ -34,7 +34,7 @@ export class ArticlesComponent implements OnInit{
 
 
   getCategories() {
-    this.categories = this.categorieService.getCategories();
+    this.categorieService.getCategories().subscribe(data=> {this.categories = data._embedded.site_articles_category; });
   }
 
   changeFilter(filter: Categorie)
